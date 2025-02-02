@@ -66,7 +66,6 @@ def register():
     if request.method == "POST":
         user = User(username=form.username.data, password=form.password.data, address = form.username.data)
         login_user(user)
-
         db.session.add(user)
         db.session.commit()
         print("registered")
